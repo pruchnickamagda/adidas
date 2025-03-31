@@ -1,0 +1,58 @@
+Mapping 1 (markets)
+- Sort alphabetically by market
+
+Mapping 2 (submarkets):
+- Corrected description column name
+
+Mapping 3 (distribution channels):
+- renamed channel to channel_id
+
+Mapping 4 (divisions):
+-
+
+Data:
+1. Cleaned up column names:
+Lowered, trimmed (get rid of trailing or double whitspaces), replaced whitespaces with underscores
+2. Renamed columns for clarity and simplification:
+- market -> market_id
+- country -> country_id
+- distribution_channel - channel_id
+- sales_order -> order_id
+- article -> article_id
+- division -> division_id
+- warehouse -> warehouse_id
+
+
+
+CHATGPT:
+Analyzing the data column names:
+
+ExtractionDate – When the snapshot or report was generated.
+
+Market / Country – Geographic information indicating where the order is destined or originates.
+
+DistributionChannel – The channel through which the products are being sold (e.g., e-commerce, retail, wholesale).
+
+SalesOrderID – A unique identifier for each order.
+
+ArticleNumber – The product or SKU (stock-keeping unit).
+
+DivisionCode – Possibly a product category (e.g., footwear, apparel).
+
+DemandType – Could be “SALES ORDER” “FORECASTS” and "FORECAST" etc., indicating whether it’s an actual customer order or forecasted demand.
+
+SupplyType – How the demand is being fulfilled (e.g., “STOCK AT WAREHOUSE,” “PURCHASE ORDER,” “NO SUPPLY,” or “IN TRANSIT”).
+
+WarehouseID – Which warehouse is involved in fulfilling the order.
+
+PlannedArrivalDateWH – When the item is expected to arrive at the warehouse.
+
+PORequestedDate – The date a purchase order was requested.
+
+MaterialAvailabilityDateWH – When the product should be physically available at the warehouse.
+
+ConfirmedDateCustomer – The date you (the supplier) confirmed delivery to the customer.
+
+RequestedDateCustomer – The date the customer originally requested.
+
+DemandQuantity – The number of units requested or forecasted.
