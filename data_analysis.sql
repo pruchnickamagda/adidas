@@ -86,7 +86,7 @@ select
             when material_availability_date_at_warehouse <= requested_date_from_customer
                  and material_availability_date_at_warehouse is not null
                  and requested_date_from_customer is not null
-                 and supply_type != 'NO SUPPLY'
+                 and supply_type != 'NO SUPPLY' and demand_type = 'SALES ORDER'
             then 1
             else 0
         end) as on_time_available_orders,
@@ -94,7 +94,7 @@ select
                 when material_availability_date_at_warehouse <= requested_date_from_customer
                      and material_availability_date_at_warehouse is not null
                      and requested_date_from_customer is not null
-                     and supply_type != 'NO SUPPLY'
+                     and supply_type != 'NO SUPPLY' and demand_type = 'SALES ORDER'
                 then 1
                 else 0
              end) * 100.0 / count(*) as decimal(5,2)) as on_time_availability_percentage
